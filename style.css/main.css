@@ -1,0 +1,453 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 1980px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*============================Header navbar============================================*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    padding: 28px 0;
+
+    background-color: #4D98A4;
+}
+
+.navbar__logo {
+    margin-left: 10vw;
+
+    opacity: 1;
+    font-family:'Cherry Swash', cursive;
+    font-size: calc(18px + 2vw);
+
+    color: #FFFFFF;
+}
+
+.navbar__nav {
+    display: flex;
+    justify-content: space-around;
+
+    margin-right: 100px;
+}
+
+.navbar__link {
+    display: block;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: calc(8px + 0.8vw);
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #DCE3E4;
+}
+
+.navbar__link--slash::after {
+    content:'\002F';
+    margin: 0 calc(10px + 0.5vw);
+
+    color: #DCE3E4;
+}
+
+.navbar__link:hover {
+    color: coral;
+}
+
+/*=====================================Navbar-burger==========================*/
+
+.navbar__burger {
+    display: none;
+    position: absolute;
+
+    top: 30px;
+    right: 20px;
+
+    height: 8px;
+    width: 50px;
+
+    background: #DCE3E4;
+}
+
+.navbar__burger::before {
+    content:'';
+
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 8px;
+
+    background: #DCE3E4;
+}
+
+.navbar__burger::after {
+    content:'';
+    position: absolute;
+    top: 20px;
+
+    width: 50px;
+    height: 7px;
+
+    background: #DCE3E4;
+}
+
+/*=====================================Main==================================*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    padding-top: 129px;
+    padding-bottom: 30px;
+
+    text-align: center;
+
+    background: url(../img/banner-image.png) no-repeat center center;
+    background-size: cover;
+}
+
+h1 {
+    font-size: calc(15px + 2vw);
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #E4E4E4;
+}
+
+.banner__button {
+    width: calc(200px + 8vw);
+    padding: 12px 15px 13px 15px;
+    margin-top: 46px;
+    margin-bottom: 134px;
+    border: 2px solid #FFFFFF;
+
+    text-align: center;
+    font-size: calc(14px + 1vw);
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+
+    color:#E4E4E4;
+    background: transparent;
+}
+
+.banner__button:hover {
+    background-color: coral;
+    opacity: .8;
+    box-shadow: 0 0 1em;
+}
+
+/*=================================Slides===================================*/
+
+.slider ul {
+    display: flex;
+    justify-content: center;
+}
+
+.control {
+    margin: 0 5px;
+    width: 9px;
+    height: 9px;
+    
+    border-radius: 50%;
+    list-style: none;
+    cursor: pointer;
+
+    background-color: #FFFFFF;
+}
+
+.control__active {
+    background-color: #69728C;
+}
+
+.slider li:hover {
+    background-color: coral;
+}
+
+/*=================================Features===============================*/
+
+.features {
+    padding-top: 106px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.features__title {
+    font-size: calc(14px + 1.5vw);
+    font-family: Arial, sans-serif;
+    font-weight: 100;
+    line-height: 1.5;
+
+    color: #4C505D;  
+}
+
+.features__subtitle {
+    margin-top: 39px;
+    padding-bottom: 70px;
+
+    font-size: calc(10px + 0.7vw);
+    font-family: Arial,sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+
+    color: #4C505D;
+}
+
+/*=======================================Features icon=============================*/
+
+.features__icon ul {
+    display: flex;
+    justify-content: center;
+}
+
+.features__icon li {
+    width: 56px;
+    height: 56px;
+    margin: 0 5vw;
+    list-style: none;
+    cursor: pointer;
+}
+
+.icon__basket {
+    background: url(/img/basket-icon.png) no-repeat center;
+}
+
+.icon__planet {   
+    background: url(/img/planet-icon.png) no-repeat center;
+}
+
+.icon__briefcase {
+    background: url(/img/briefcase-icon.png) no-repeat center;
+}
+
+/*=====================================Testimonials================================*/
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding-top: 97px;
+    padding-bottom: 94px;
+    text-align: center;
+
+    background-color: #00D089;
+}
+
+.testimonials__content {
+    display: flex;
+    justify-content: center; 
+}
+
+.testimonials__avatar {
+    width: 135px;
+    height: 135px;
+    margin-right: 30px;
+
+    background: url(../img/author-avatar.png) no-repeat center center;
+}
+
+.testimonials__name {
+    position: relative;
+    font-size: calc(14px + 1vw);
+    font-family: Arial,sans-serif;
+    text-transform: uppercase;
+
+    color: #E4E4E4;
+}
+
+.testimonials__name:after {  
+    content: close-quote;
+    position: absolute;
+    left: -20px;
+    top: -25px;
+    content: "\201d";
+
+    font-weight: bold;
+    font-family: Arial,sans-serif;
+    font-size: calc(250px + 5vw);
+    opacity: 0.2;
+    color: #E4E4E4;
+} 
+
+.testimonials__text {
+    display: block;
+    margin-top: 60px;
+
+    font-size: calc(14px + 0.5vw);
+    font-family: Arial,sans-serif;
+    line-height: 1.5;
+    
+    color: #FFFFFF;
+}
+
+/*===========================================Conacts========================================*/
+
+.contacts {
+    padding: 43px 0; 
+    background: url(../img/map-image.png) no-repeat center center;
+    background-size: cover;
+}
+
+.contacts__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: calc(300px + 9vw);
+    height: calc(300px + 9vw);
+
+    border-radius: 50%;
+    margin: 0 auto;
+    background: #FDFDFD;
+    opacity: .8;
+}
+
+/*====================================================Contacts form==================================*/
+
+.contacts__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts__form--info {
+    display: block;
+    width: calc(100px + 8vw);
+
+    padding-top: 11px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    margin-bottom: 14px;
+    border: 2px solid #DCE3E4;
+    border-radius: 5px;
+
+    font-family: Arial,sans-serif;
+    font-size: calc(10px + 0.5vw);
+    
+    background-color: #ffffff;
+}
+
+.contacts__form--message {
+    width: calc(100px + 8vw);
+    padding-top: 13px;
+    padding-bottom: 54px;
+    padding-left: 15px;
+    margin-bottom: 3vh;
+
+    border: 2px solid #DCE3E4;
+    border-radius: 5px;
+
+    font-family: Arial,sans-serif;
+    font-size: calc(10px + 0.5vw);
+    color: #ffffff;
+}
+
+.contacts__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    width: calc(50px + 2.5vw);
+    height: calc(50px + 2.5vw);
+
+    border-radius: 50%;
+    border: none;
+    background: #00D089;
+}
+
+/*========================================Contacts button=======================================*/
+
+.contacts__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    width: calc(50px + 2.5vw);
+    height: calc(50px + 2.5vw);
+
+    border-radius: 50%;
+    border: none;
+    background: #00D089;
+}
+
+.tick-mark {
+    position: relative;
+    display: flex;
+
+    width: calc(40px + 1vw);
+    height: calc(40px + 1vw);
+}
+
+.tick-mark::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 50%;
+
+    height: calc(12px + 1vw);
+    width: 10px;
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+.tick-mark::after {
+    content: '';
+    position: absolute;
+    left: 11px;
+    bottom: 1px;
+    
+    width: calc(30px + 1vw);
+    height: 10px;
+    border-radius:5px;
+    
+    background-color: #ffffff;
+    
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+/*===============================================Footer==========================*/
+
+.footer {
+    padding-top: 14px; 
+    padding-bottom: 16px;
+
+    text-align: center;
+    background-color: #00D089;
+}
+
+.footer p {
+    text-transform: uppercase;
+    font-size: calc(10px + 0.5vw);
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+
